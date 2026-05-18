@@ -1,16 +1,9 @@
-"""OPD — On-Policy Distillation for LLMs.
+"""OPD — On-Policy Distillation for LLMs."""
 
-Structure:
-  RolloutWorker → Buffer → Trainer
-  (student       (cache)  (teacher score + KL loss + backward)
-   generate)
+from .rollout import RolloutBackend, RolloutOutput, HFRolloutBackend, HFRolloutEngine, VLLMRolloutBackend, VLLMEngine
 
-Usage:
-    from opd import OPDTrainer, RolloutWorker, Buffer
-"""
-
-from .rollout import RolloutWorker, RolloutOutput
-from .buffer import Buffer, BufferItem
-from .trainer import OPDTrainer
-
-__all__ = ["OPDTrainer", "RolloutWorker", "RolloutOutput", "Buffer", "BufferItem"]
+__all__ = [
+    "RolloutBackend", "RolloutOutput",
+    "HFRolloutBackend", "HFRolloutEngine",
+    "VLLMRolloutBackend", "VLLMEngine",
+]
