@@ -10,7 +10,7 @@ from typing import Literal
 
 
 @dataclass
-class LLMConfig:
+class LLMEngineConfig:
     """LLM inference engine configuration."""
     # Model loading
     model_name_or_path: str = ""
