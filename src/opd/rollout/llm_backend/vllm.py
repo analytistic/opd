@@ -4,8 +4,10 @@ from typing import Any
 
 import torch
 
-from ..arguments import RolloutArgs
-from .base import RolloutBackend, RolloutOutput
+from ...arguments import RolloutArgs
+from ..llm_backend.base import LLMBackend, RolloutOutput
+
+RolloutBackend = LLMBackend  # backward compat alias
 
 
 class VLLMEngine:

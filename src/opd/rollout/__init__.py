@@ -1,9 +1,11 @@
-from .base import RolloutBackend, RolloutOutput
-from .hf_backend import HFRolloutBackend, HFRolloutEngine
-from .vllm_backend import VLLMRolloutBackend, VLLMEngine
+from .llm_backend import LLMBackend, RolloutOutput, HFRolloutBackend, HFRolloutEngine, VLLMRolloutBackend, VLLMEngine
+from .env import Env
+from .worker import Worker, StepOutput, Trajectory
 
 __all__ = [
-    "RolloutBackend", "RolloutOutput",
+    "LLMBackend", "RolloutOutput",
     "HFRolloutBackend", "HFRolloutEngine",
     "VLLMRolloutBackend", "VLLMEngine",
+    "Env",
+    "Worker", "StepOutput", "Trajectory",
 ]
